@@ -1,1 +1,32 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CocinaPro | Gestión de Producción</title><link rel="stylesheet" href="styles.css"></head><body><div class="app"><aside id="side"><div class="brand"><b>CP</b><div><strong>CocinaPro</strong><small>Gestión de Producción</small></div></div><nav id="nav"></nav><div class="sidefoot">v1.0 · GitHub Pages</div></aside><main><header><button id="mobile">☰</button><div>Operaciones / <strong id="title">Dashboard</strong></div><div class="tools"><input id="search" placeholder="Buscar módulo..."><span>🔔</span><b>👤 Administrador</b></div></header><section id="content"></section></main></div><div id="modal"></div><div id="toast"></div><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CocinaPro | Gestión de Producción</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">CP</div>
+        <div><strong>CocinaPro</strong><span>Gestión de Producción</span></div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="sidebar-footer"><button class="collapse-btn" id="collapseBtn">‹</button><span>v1.0 • GitHub Pages</span></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><button class="mobile-menu" id="mobileMenu">☰</button><div class="breadcrumbs">Operaciones / <strong id="pageTitle">Dashboard</strong></div></div>
+        <div class="top-actions"><div class="search-global"><span>⌕</span><input id="globalSearch" placeholder="Buscar módulo..."></div><button class="icon-btn" onclick="showToast('No hay nuevas notificaciones')">🔔<b>3</b></button><div class="user">👤 <span>Administrador</span></div></div>
+      </header>
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal" id="modal"></div></div>
+  <div class="toast" id="toast"></div>
+  <input type="file" id="importFile" accept=".json" hidden>
+  <script src="app.js"></script>
+</body>
+</html>
